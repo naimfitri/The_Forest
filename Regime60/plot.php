@@ -147,11 +147,7 @@
     const map = L.map('map').setView([lat, log], 20); // Initial zoom level 20 for a detailed view
     
     // Add MapTiler tiles
-<<<<<<< HEAD
     const apiKey = config.maptilerApiKey; // API key from config file
-=======
-    const apiKey = ''; // Replace with your MapTiler API key
->>>>>>> 13924c06ec8aa872c8e08be19e29d67e989b9d55
     L.tileLayer(`https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=${apiKey}`, {
     attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a>',
     maxZoom: 22 // Supports higher zoom levels
