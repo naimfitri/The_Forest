@@ -65,7 +65,7 @@ fetchForestData().then(data => console.log(data));
     const map = L.map('map').setView([lat, log], 20); // Initial zoom level 20 for a detailed view
     
     // Add MapTiler tiles
-    const apiKey = 'eObgw8Pn6PuGVdwTtBjL'; // Replace with your MapTiler API key
+    const apiKey = ''; // Replace with your MapTiler API key
     L.tileLayer(`https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=${apiKey}`, {
     attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a>',
     maxZoom: 22 // Supports higher zoom levels
