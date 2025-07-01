@@ -2,6 +2,24 @@
 
 A web-based forest management and analysis system for tracking tree data, simulating forest growth, and visualizing deforestation patterns.
 
+## Screenshots
+
+### Interactive Forest Map
+![Forest Map Visualization](img/map.jpg)
+*Interactive map showing tree locations, status, and cutting patterns*
+
+### Forest Generation Interface
+![Forest Generation UI](img/generatedata.jpg)
+*User interface for generating and configuring forest parameters*
+
+### Data Analysis Dashboard
+![Analysis Dashboard](img/homepage.jpg)
+*Main dashboard showing forest statistics and regime analysis*
+
+### Species Group Analysis
+![Species Analysis](img/standtable.jpg)
+*Detailed view of different species groups and their distribution*
+
 ## Features
 
 - Interactive forest map visualization using MapTiler
@@ -79,6 +97,20 @@ deforest/
 3. Make your changes
 4. Ensure `config.js` is not committed
 5. Submit a pull request
+
+### Adding Screenshots
+
+To update the screenshots in this README:
+
+1. Navigate to the `screenshots/` directory
+2. Read the `screenshots/README.md` for detailed instructions
+3. Take screenshots of the key features:
+   - Interactive forest map (`forest-map.png`)
+   - Forest generation interface (`forest-generation.png`) 
+   - Main dashboard (`dashboard.png`)
+   - Species analysis view (`species-analysis.png`)
+4. Save images with the exact filenames specified
+5. The README will automatically display the updated screenshots
 
 ### Security
 
