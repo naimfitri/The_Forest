@@ -6,6 +6,7 @@
   <title>Tree Map with MapTiler</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../config.js"></script>
   
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -65,7 +66,7 @@ fetchForestData().then(data => console.log(data));
     const map = L.map('map').setView([lat, log], 20); // Initial zoom level 20 for a detailed view
     
     // Add MapTiler tiles
-    const apiKey = 'eObgw8Pn6PuGVdwTtBjL'; // Replace with your MapTiler API key
+    const apiKey = config.maptilerApiKey; // API key from config file
     L.tileLayer(`https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=${apiKey}`, {
     attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a>',
     maxZoom: 22 // Supports higher zoom levels
