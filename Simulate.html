@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Action</title>
+</head>
+<body>
+    <button id="runButton">Run Operations</button>
+
+    <script>
+        document.getElementById("runButton").addEventListener("click", function () {
+            // Step 1: Run Calculate.php
+            fetch('Calculate.php')
+                .then(response => response.text())
+                .then(result => {
+                    console.log('Calculate.php completed:', result);
+
+                    // Step 2: Run Calculate_Damage.php
+                    return fetch('Calculate_Damage.php');
+                })
+                .then(response => response.text())
+                .then(result => {
+                    console.log('Calculate_Damage.php completed:', result);
+
+                    // Step 3: Redirect to growth.php
+                    window.location.href = 'growth.php';
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

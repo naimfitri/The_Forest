@@ -1,0 +1,269 @@
+  :root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+  
+  }
+
+  .logo {
+    color: var(--color-white);
+    font-size: 30px;
+  }
+
+  .logo span {
+    color: var(--color-primary);
+  }
+
+  .menu-bar {
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+  z-index: 1000; /* Ensure the navbar is above the map */
+  }
+
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+
+  .menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+
+    position: relative;
+  }
+
+  .menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+
+    transition: all 0.3s;
+  }
+
+  .menu-bar ul li a:hover {
+    color: var(--color-primary);
+  }
+
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+
+  /* dropdown menu style */
+  .dropdown-menu {
+    display: none;
+  }
+
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+  }
+
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .dropdown-menu-1 {
+    display: none;
+  }
+
+  .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+  }
+
+  .hero {
+    height: calc(100vh - 80px);
+    background-image: url(./bg.jpg);
+    background-position: center;
+  }
+  /* Map Container */
+  #map {
+  height: calc(100vh - 80px); /* Adjust height to account for the navbar */
+  z-index: 1; /* Set a lower z-index for the map */
+  position: relative; /* Ensure it is positioned correctly */
+  }
+
+  /* Controls Panel */
+  #controls {
+    position: fixed; 
+    top: 90px; 
+    left: 50px; 
+    z-index: 1000;
+    background: #f9f9f9; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    font-family: 'Arial', sans-serif;
+  }
+
+  #controls label {
+    display: block; 
+    margin-bottom: 8px; 
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  #controls input[type="number"],
+  #controls select {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
+
+  #controls button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+
+  #controls button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+
+  #controls button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+  }
+
+  /* Popup Styles */
+  .leaflet-popup-content-wrapper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .leaflet-popup-content {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  .leaflet-popup-tip {
+    background: #ddd;
+  }
+
+  /* General Styles */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+
+  button {
+    outline: none;
+  }
+
+  .legend {
+      background: white;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 30px; /* Distance from the bottom */
+      right: 10px; /* Distance from the right */
+      z-index: 1000;
+      max-width: 200px; /* Maximum width of the legend */
+  }
+
+  .legend h4 {
+      margin: 0 0 5px; /* Margin for the heading */
+      font-size: 16px; /* Font size for the heading */
+  }
+
+  .legend div {
+      display: flex; /* Use flexbox for alignment */
+      align-items: center; /* Center items vertically */
+      margin-bottom: 5px; /* Space between legend items */
+  }
+
+  .legend img {
+      width: 20px; /* Adjust icon size */
+      height: 20px; /* Adjust icon size */
+      margin-right: 5px; /* Space between icon and text */
+  }
+
+  #victimCounts {
+    background: white;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+    z-index: 1000;
+    max-width: 200px; /* Maximum width of the legend */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for a subtle effect */
+  }
+
+  #victimCounts h4 {
+    margin: 0 0 5px; /* Margin for the heading */
+    font-size: 16px; /* Font size for the heading */
+    color: #333; /* Heading color */
+  }
+
+  #victimCounts p {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin: 5px 0; /* Space between legend items */
+    font-size: 14px; /* Font size for the text */
+    color: #555; /* Text color */
+  }
+
+  #victimCounts span {
+    font-weight: bold; /* Highlight the counts */
+    margin-left: auto; /* Push the count to the right */
+    color: #000; /* Dark color for the counts */
+  }
